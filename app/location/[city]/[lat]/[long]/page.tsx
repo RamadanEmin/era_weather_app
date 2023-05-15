@@ -1,5 +1,6 @@
 import { getClient } from "@/apollo-client";
 import CalloutCard from "@/components/CalloutCard";
+import InformationPanel from '@/components/InformationPanel';
 import StatCard from "@/components/StatCard";
 import fetchWeatherQuery from "@/graphql/queries/fetchWeatherQueries";
 
@@ -32,6 +33,7 @@ async function WeatherPage({ params: { city, lat, long } }: Props) {
 
   return (
     <div className="flex flex-col min-h-screen md:flex-row">
+      <InformationPanel city={city} lat={lat} long={long} results={results} />
       <div className="flex-1 p-5 lg:p-10">
         <div className="p-5">
           <div className="pb-5">
