@@ -1,5 +1,6 @@
 import { getClient } from "@/apollo-client";
-import CalloutCard from '@/components/CalloutCard';
+import CalloutCard from "@/components/CalloutCard";
+import StatCard from '@/components/StatCard';
 import fetchWeatherQuery from "@/graphql/queries/fetchWeatherQueries";
 
 export const revalidate = 60;
@@ -42,7 +43,20 @@ async function WeatherPage({ params: { city, lat, long } }: Props) {
             </p>
           </div>
           <div className="m-2 mb-10">
-            <CalloutCard message='This is where GPT-4 Summary will go!' />
+            <CalloutCard message="This is where GPT-4 Summary will go!" />
+          </div>
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 m-2">
+            <StatCard
+              title="Maximum Temperature"
+              metric={`${results.daily.temperature_2m_max[0].toFixed(1)}˚`}
+              color="yellow"
+            />
+
+            <StatCard
+              title="Minimum Temperature"
+              metric={`${results.daily.temperature_2m_min[0].toFixed(1)}˚`}
+              color="green"
+            />
           </div>
         </div>
       </div>
