@@ -51,7 +51,6 @@ How to use this App?
 
 Ramadan Emin
 
-<img src="/images/pic1.png"  width= 800px height= 400px>
 <img src="/images/pic2.png"  width= 800px height= 400px>
 <img src="/images/pic3.png"  width= 800px height= 400px>
 <img src="/images/pic4.png"  width= 800px height= 400px>
